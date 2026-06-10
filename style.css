@@ -841,77 +841,99 @@ padding: 40px;
 }
 
 
-
-
-/* =====================
-   TABLET (max 1024px)
-   ===================== */
 @media (max-width: 1024px) {
+
+    /* NAV */
     .Nav-bar {
-        gap: 40px;
+        gap: clamp(20px, 5vw, 80px);
         padding: 14px 20px;
     }
+
+    /* HERO */
     .hero-contents {
-        padding: 40px 30px;
+        padding: 40px 32px;
     }
+
+    /* SOCIALS - reposition */
+    .socials {
+        position: static;
+        padding: 10px 0px;
+    }
+
+    /* ABOUT */
     .About {
-        padding: 40px 30px;
-        border-radius: 40px;
+        flex-direction: column;
+        padding: 40px 32px;
+        border-radius: 30px;
     }
+    .abtimage1 img {
+        width: 180px;
+    }
+
+    /* MY WORK */
     .My-work {
-        padding: 40px 30px;
+        height: auto;
+        padding: 40px 32px;
     }
-    .Testimonial {
-        padding: 40px 30px;
-    }
-    .testimonial-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .testimonial-content h1 {
-        width: 100%;
-    }
-    .testifier {
-        width: 100%;
-    }
-    .footer-content {
-        padding: 40px 30px;
-        gap: 40px;
-    }
-    .details-command {
-        padding: 40px 30px;
-    }
-}
- 
-/* =====================
-   MOBILE (max 768px)
-   ===================== */
-@media (max-width: 768px) {
- 
-    /* NAVBAR */
-    .Nav-bar {
-        flex-direction: column;
-        gap: 16px;
-        padding: 14px 16px;
-        align-items: center;
-    }
-    .Nav-bar ul {
-        gap: 10px;
-        flex-wrap: wrap;
+    .project-container {
         justify-content: center;
     }
- 
+
+    /* TESTIMONIAL */
+    .Testimonial {
+        height: auto;
+        padding: 40px 32px;
+    }
+
+    /* CONTACT */
+    .details-command {
+        padding: 40px 40px;
+    }
+
+    /* FOOTER */
+    .footer-content {
+        gap: 60px;
+        padding: 40px 32px;
+    }
+}
+
+
+/* ================================
+   MOBILE LANDSCAPE / SMALL TABLET - 768px
+================================ */
+@media (max-width: 768px) {
+
+    /* NAV */
+    .Nav-bar {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 16px 20px;
+        justify-content: space-between;
+    }
+    .Nav-bar img {
+        width: 130px;
+    }
+    .Nav-bar ul {
+        gap: 16px;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+    .Nav-bar button {
+        order: 2;
+    }
+
     /* HERO */
     .hero-contents {
         padding: 30px 20px;
+        gap: 14px;
     }
     .hero-contents h1 {
-        font-size: clamp(24px, 7vw, 36px);
+        font-size: clamp(24px, 5vw, 36px);
         width: 100%;
     }
     .parag {
         width: 100%;
-        font-size: 15px;
     }
     .hero-buttons {
         flex-direction: column;
@@ -922,41 +944,37 @@ padding: 40px;
         width: 100%;
         text-align: center;
     }
+
+    /* STATS */
     .bottomer {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 12px;
+        gap: 14px;
     }
     .container {
-        width: calc(50% - 10px);
-        height: auto;
-        min-height: 120px;
-        margin: 10px 0;
+        width: 160px;
+        height: 120px;
+        margin: 20px 0px;
     }
- 
+
     /* SOCIALS */
     .socials {
-        flex-wrap: wrap;
-        justify-content: center;
+        position: static;
+        padding: 10px 0px;
     }
- 
+
     /* ABOUT */
     .About {
         flex-direction: column;
         padding: 30px 20px;
-        border-radius: 30px;
-        gap: 20px;
-        min-height: auto;
+        border-radius: 20px;
+        margin-top: 60px;
     }
-    .abtimage1 {
+    .about-image {
+        display: flex;
+        gap: 0px;
         justify-content: center;
-        flex-wrap: wrap;
     }
     .abtimage1 img {
-        width: 160px;
-    }
-    .abt-content1 p {
-        width: 100%;
+        width: 140px;
     }
     .abtcnts-box {
         flex-direction: column;
@@ -967,19 +985,13 @@ padding: 40px;
     }
     .view-more button {
         width: 100%;
-        padding: 12px 20px;
     }
- 
+
     /* MY WORK */
     .My-work {
+        height: auto;
         padding: 30px 20px;
         margin-top: 60px;
-    }
-    .work-content {
-        width: 100%;
-    }
-    .work-content h1 {
-        font-size: clamp(24px, 7vw, 36px);
     }
     .project-container {
         flex-direction: column;
@@ -987,140 +999,423 @@ padding: 40px;
     }
     .project-list {
         width: 100%;
+        max-width: 400px;
+        height: auto;
     }
     .project-content button {
         transform: none;
     }
- 
+    .proj-btn button {
+        width: 100%;
+        margin-bottom: 14px;
+    }
+    .work-content {
+        width: 100%;
+        text-align: center;
+    }
+
     /* TESTIMONIAL */
     .Testimonial {
+        height: auto;
         padding: 30px 20px;
-        margin-top: 60px;
-    }
-    .testimonial-title {
-        flex-direction: column;
-        gap: 12px;
+        margin-top: 40px;
     }
     .testimonial-content {
         flex-direction: column;
-        gap: 24px;
-        margin: 24px 0px;
     }
     .testimonial-content h1 {
-        font-size: clamp(1.4em, 6vw, 2em);
         width: 100%;
+        font-size: clamp(1.4em, 4vw, 2em);
     }
     .testifier {
         width: 100%;
-        border-radius: 10px 60px;
         min-height: auto;
+        border-radius: 10px 40px;
     }
-    .testifier p {
-        font-size: 16px;
-    }
- 
-    /* CONTACTS */
-    .Contact-details {
-        padding: 20px;
-    }
+
+    /* CONTACT */
     .details-card {
         flex-direction: column;
-        width: 100%;
-        margin: 20px 0px;
+        margin: 40px 20px;
+        width: calc(100% - 40px);
     }
     .details-command {
+        padding: 30px 24px;
         width: 100%;
-        padding: 30px 20px;
     }
     .details-content {
         width: 100%;
-        padding: 20px;
+        padding: 20px 24px;
     }
-    .details-btn button {
-        margin-bottom: 30px;
-    }
- 
+
     /* FOOTER */
-    .footer-bg {
-        min-height: auto;
-    }
     .footer-content {
         flex-direction: column;
-        padding: 30px 20px;
         gap: 30px;
+        padding: 30px 20px;
     }
     .footer-content1 {
         width: 100%;
     }
     .footer-content2 {
-        flex-wrap: wrap;
         gap: 30px;
     }
 }
- 
-/* =====================
-   SMALL MOBILE (max 480px)
-   ===================== */
+
+
+/* ================================
+   MOBILE PORTRAIT - 480px
+================================ */
 @media (max-width: 480px) {
+
+    /* NAV */
+    .backgroundimage{
+        display: none;
+    }
+    .Nav-bar {
+        padding: 12px 16px;
+    }
     .Nav-bar ul {
-        gap: 6px;
+        visibility: hidden;
+        gap: 8px;
     }
     .Nav-bar li a {
         padding: 8px 10px;
         font-size: 13px;
     }
+    .Nav-bar button{
+        display: none;
+    }
+    .Nav-bar img {
+        width: 110px;
+    }
+
+    /* HERO */
+    .hero-contents {
+        padding: 20px 16px;
+    }
     .hero-contents h1 {
-        font-size: 22px;
+        font-size: 28px;
+    }
+    .parag {
+        font-size: clamp(12px, 4vw,16px);
+    }
+    .bottomer {
+        gap: 10px;
     }
     .container {
-        width: 100%;
+        width: calc(33% - 8px);
+        min-width: 100px;
+        height: 110px;
+        padding-left: 14px;
+        gap: 14px;
+        border-radius: 20px 4px;
+    }
+    .container h2 {
+        font-size: 20px;
+    }
+    .container p {
+        font-size: 12px;
+    }
+    .socials{
+        display: none;
+    }
+
+    /* ABOUT */
+    .About {
+        padding: 20px 16px;
+        margin-top: 0px;
     }
     .abtimage1 img {
-        width: 120px;
+        width: 110px;
     }
-    .testifier {
-        border-radius: 10px 40px;
+    .abt-content1 h2 {
+        font-size: 1.4em;
+    }
+    .abt-content1 p {
+        font-size: 16px;
+    }
+
+    /* MY WORK */
+    .My-work {
+        padding: 20px 16px;
+        margin-top: 40px;
+    }
+    .project-list {
+        width: 100%;
+        border-radius: 30px;
+    }
+    .work-btn button {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    /* TESTIMONIAL */
+    .Testimonial {
+        padding: 20px 16px;
+    }
+    .testifier p {
+        font-size: 14px;
+    }
+    .testimonial-title button {
+        width: 180px;
+        font-size: 14px;
+        
+    }
+
+    /* CONTACT */
+    .details-card {
+        margin: 24px 16px;
+        width: calc(100% - 32px);
+    }
+    .details-command {
+        padding: 24px 16px;
+    }
+    .details-command h1 {
+        font-size: clamp(20px, 5vw, 28px);
+    }
+    .details-content {
+        padding: 16px;
+    }
+    .details-content h2 {
+        font-size: 16px;
+    }
+
+    /* FOOTER */
+    .footer-bg{
+        width: 100%;
+    }
+    .footer-content {
+        padding: 24px 16px;
     }
     .footer-content2 {
         flex-direction: column;
+        gap: 20px;
     }
 }
- 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@keyframes fadeInUp{
-    from{
+@keyframes fadeInUp {
+    from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(30px);
     }
-    to{
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Nav-bar {
+    animation: slideDown 0.6s ease forwards;
+}
+
+/* Hero badge fades in */
+.Topper {
+    animation: fadeInLeft 0.7s ease 0.2s both;
+}
+
+/* Hero headline fades up */
 .hero-contents h1 {
-    animation: fadeInUp 1s ease forwards;
+    animation: fadeInUp 0.8s ease 0.4s both;
 }
-.hero-contents .parag{
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.3s;
+ 
+/* Hero paragraph fades up */
+.parag {
+    animation: fadeInUp 0.8s ease 0.6s both;
 }
-.hero-buttons{
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.4s;
+ 
+/* Hero buttons fade up */
+.hero-buttons {
+    animation: fadeInUp 0.8s ease 0.8s both;
+}
+ 
+/* Stats fade up */
+.bottomer {
+    animation: fadeInUp 0.8s ease 1s both;
+}
+ 
+/* Social icons fade in */
+.socials {
+    animation: fadeIn 1s ease 1.2s both;
+}
+ 
+/* Hero image fades in */
+.backgroundimage {
+    animation: fadeIn 1s ease 0.2s both;
+}
+ 
+ 
+/* ================================
+   2. HOVER ANIMATIONS
+   Cards, buttons, links
+================================ */
+ 
+/* Project cards lift on hover */
+.project-list {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-list:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
+}
+ 
+/* Stats cards lift on hover */
+.container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
+}
+ 
+/* Testimonial card subtle pulse */
+.testifier {
+    transition: transform 0.3s ease;
+}
+.testifier:hover {
+    transform: translateY(-4px);
+}
+ 
+/* Skill boxes lift on hover */
+#box, #box2, #box2i, #box3 {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#box:hover, #box2:hover, #box2i:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.08);
+}
+ 
+/* Social icons smooth scale */
+.socials img,
+.footer-sociallinks img {
+    transition: transform 0.3s ease;
+}
+.socials img:hover,
+.footer-sociallinks img:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+ 
+/* Nav links smooth underline */
+.Nav-bar li a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+ 
+/* About section images hover */
+.abtimage1 img {
+    transition: transform 0.3s ease;
+}
+.abtimage1 img:hover {
+    transform: scale(1.04);
+}
+ 
+ 
+/* ================================
+   3. BUTTON PULSE ANIMATION
+   CTA buttons draw attention
+================================ */
+ 
+@keyframes subtlePulse {
+    0% { box-shadow: 0 0 0 0 rgba(26, 26, 26, 0.3); }
+    70% { box-shadow: 0 0 0 10px rgba(26, 26, 26, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(26, 26, 26, 0); }
+}
+ 
+.btn1 {
+    animation: subtlePulse 2.5s ease 2s infinite;
+}
+ 
+ 
+/* ================================
+   4. AVAILABLE BADGE ANIMATION
+   Blinking dot to show availability
+================================ */
+ 
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+ 
+/* Add a blinking dot before the badge */
+.Topper p::before {
+    content: "● ";
+    color: #4caf50;
+    animation: blink 1.5s ease infinite;
+    font-size: 8px;
+    vertical-align: middle;
+}
+ 
+ 
+/* ================================
+   5. SMOOTH SCROLL BEHAVIOUR
+================================ */
+ 
+html {
+    scroll-behavior: smooth;
+}
+ 
+ 
+/* ================================
+   6. FOOTER LINK UNDERLINE ANIMATION
+================================ */
+ 
+.footer-content2 ul li a {
+    position: relative;
+}
+.footer-content2 ul li a::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background: #fafafa;
+    display: block;
+    transition: width 0.3s ease;
+}
+.footer-content2 ul li a:hover::after {
+    width: 100%;
+}
+ 
+ 
+/* ================================
+   7. SECTION TITLE ANIMATION
+   Worktitle and section labels
+================================ */
+ 
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+ 
+.worktitle p {
+    transition: transform 0.3s ease;
+}
+.worktitle p:hover {
+    transform: scale(1.05);
 }
